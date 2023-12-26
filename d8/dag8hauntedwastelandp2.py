@@ -1,10 +1,9 @@
 
-
+import math
 
 
 def find(instructions, d, startnode):
     current = startnode
-    final = "ZZZ"
     counter = 0
     lrmap = {"L":0, "R":1}
     while True:
@@ -13,11 +12,10 @@ def find(instructions, d, startnode):
         if current[-1] == "Z":
             break
         counter += 1
-    print(counter + 1)
-10921547990923
+    return counter + 1
 
 if __name__ == "__main__":
-    s = open('input8.txt', 'r').read().split('\n')
+    s = open('d8/input8.txt', 'r').read().split('\n')
     instructions = s[0]
     rest = s[2:]
     d = {}
@@ -30,9 +28,9 @@ if __name__ == "__main__":
             nodes.append(line[:3])
 
 
-    print(nodes)
+    res = []
     for node in nodes:
-        find(instructions, d, node)
+        res.append(find(instructions, d, node))
 
-
+    print(math.lcm(*res))
 

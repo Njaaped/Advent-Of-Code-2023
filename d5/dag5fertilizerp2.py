@@ -1,5 +1,5 @@
 
-lines = open('input5.txt','r').read().split('\n')
+lines = open('d5/input5.txt','r').read().split('\n')
 
 d = []
 seeds = []

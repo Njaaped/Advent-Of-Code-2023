@@ -87,8 +87,7 @@ def findpath2(adj, spos):
         otherdir = dirmap[nodedir]
         newx = x + nextdir[otherdir][0]
         newy = y + nextdir[otherdir][1]
-        if dist == 2:
-            print(adj[x][y])
+
         if 0 <= newx < rows and 0 <= newy < cols and adj[newx][newy] in legal and (newx,newy) not in visited:
             s = adj[newx][newy]
 
@@ -124,15 +123,10 @@ def findpath2(adj, spos):
                 outside.add((r,c))
 
 
-    for r in range(len(newadj)):
-        for c in range(len(newadj[r])):
-            print("#" if (r,c) in outside else ".", end="")
-        print("\n")
-
-    print(rows*cols - (len(outside.union(visited))))
+    print(rows*cols - (len(outside | visited)))
 
 if __name__ == "__main__":
-    s = open('inputtest10.txt').read().split('\n')
+    s = open('d10/input10.txt').read().split('\n')
     adj = []
     finds = (False, None)
 

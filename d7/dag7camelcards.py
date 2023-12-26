@@ -1,6 +1,3 @@
-
-import heapq
-from dataclasses import dataclass
       
 class Hand:
     def __init__(self, hand, bid) -> None:
@@ -64,5 +61,5 @@ def dotask(s) -> None:
     print(su)
 
 if __name__ == "__main__":
-    s = open('input7.txt', 'r').read().split('\n')
+    s = open('d7/input7.txt', 'r').read().split('\n')
     dotask(s)

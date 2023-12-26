@@ -1,5 +1,5 @@
 
-def recognize_and_predict(pattern, degree=2):
+def recognize_and_predict(pattern):
     new_patterns = [pattern]
     while True:
         new = [pattern[i]-pattern[i-1] for i in range(1,len(pattern))]
@@ -26,11 +26,9 @@ def recognize_and_predict(pattern, degree=2):
         cur = pat[::-1][-1] - cur
         
     return cur
-    #print(new_patterns)
-
 
 if __name__ == "__main__":
-    s = open('input9.txt').read().split('\n')
+    s = open('d9/input9.txt').read().split('\n')
     su = 0
     for line in s:
         pattern = list(map(int, line.split()))

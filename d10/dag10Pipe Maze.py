@@ -97,7 +97,7 @@ def findpath(adj, spos):
 
 
 if __name__ == "__main__":
-    s = open('input10.txt').read().split('\n')
+    s = open('d10/input10.txt').read().split('\n')
     adj = []
     finds = (False, None)
 

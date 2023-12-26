@@ -42,7 +42,7 @@ def task(distancestring, timestring):
 
 
 if __name__ == "__main__":
-    s = open('input6.txt','r').read().split("\n")
+    s = open('d6/input6.txt','r').read().split("\n")
     task(s[1],s[0])
 
 

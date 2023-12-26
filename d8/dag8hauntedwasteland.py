@@ -22,7 +22,7 @@ def find(instructions, d):
 
 
 if __name__ == "__main__":
-    s = open('input8.txt', 'r').read().split('\n')
+    s = open('d8/input8.txt', 'r').read().split('\n')
     instructions = s[0]
     rest = s[2:]
     d = {}

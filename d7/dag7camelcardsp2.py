@@ -84,22 +84,13 @@ class Hand:
 
         return bestscore
 
-
-
-
 def dotask(s):
 
     hp = []
     for line in s:
         hand, bid = map(str, line.split())
         hp.append(Hand(hand, int(bid)))
-
-
-
     srt = sorted(hp)
-
-
-
     su = 0
     for ind, elem in enumerate(srt, 1):
         su += elem.bid*ind
@@ -111,7 +102,7 @@ def dotask(s):
 
 
 if __name__ == "__main__":
-    s = open('input7.txt', 'r').read().split('\n')
+    s = open('d7/input7.txt', 'r').read().split('\n')
     dotask(s)
 
 
